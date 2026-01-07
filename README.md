@@ -227,7 +227,7 @@ We welcome contributions! Here's how you can help:
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🙏 Acknowledgments
+##  Acknowledgments
 
 - **Google** for the Gemini API
 - **Groq** for fast inference capabilities
@@ -235,14 +235,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **Python Tkinter** for the GUI framework
 - All the amazing open-source libraries that made this possible
 
-## 📧 Contact
-
-Have questions or suggestions? Feel free to:
-- Open an issue on GitHub
-- Submit a pull request
-- Share your experience!
-
----
 
 <div align="center">
 
