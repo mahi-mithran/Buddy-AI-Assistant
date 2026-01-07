@@ -1,0 +1,209 @@
+# =============================================================================
+# Buddy AI Assistant - Requirements
+# =============================================================================
+# Installation: pip install -r requirements.txt
+# Python Version: 3.8+
+# =============================================================================
+
+# =============================================================================
+# 🤖 CORE AI & API LIBRARIES (REQUIRED)
+# =============================================================================
+
+# Google Gemini API - Primary AI model
+google-genai>=0.3.0
+
+# HTTP Client - For Groq and HuggingFace API calls
+requests>=2.31.0,<3.0.0
+
+# =============================================================================
+# 🎤 VOICE CAPABILITIES (OPTIONAL - Recommended for full features)
+# =============================================================================
+
+# Speech Recognition - Convert speech to text
+SpeechRecognition>=3.10.0,<4.0.0
+
+# Text-to-Speech - Convert text to speech
+pyttsx3>=2.90,<3.0.0
+
+# Audio Processing - Required for microphone input
+# NOTE: PyAudio can be difficult to install. See installation guide below.
+# Uncomment the line below if you want voice features:
+# pyaudio>=0.2.13
+
+# =============================================================================
+# 📁 FILE PROCESSING (REQUIRED)
+# =============================================================================
+
+# PDF Reader - Extract text from PDF files
+PyPDF2>=3.0.0,<4.0.0
+
+# Image Processing - Handle image files
+Pillow>=10.0.0,<11.0.0
+
+# =============================================================================
+# 🎯 OPTIONAL FEATURES
+# =============================================================================
+
+# WhatsApp Integration & Web Utilities
+pywhatkit>=5.4,<6.0.0
+
+# Wikipedia Search
+wikipedia>=1.4.0,<2.0.0
+
+# Joke Generator
+pyjokes>=0.6.0,<1.0.0
+
+# =============================================================================
+# 📋 INSTALLATION GUIDES
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# PyAudio Installation (for Voice Input)
+# -----------------------------------------------------------------------------
+#
+# ⚠️ PyAudio is OPTIONAL but needed for voice features
+#
+# WINDOWS:
+#   Method 1 - Using pipwin (Recommended):
+#     pip install pipwin
+#     pipwin install pyaudio
+#
+#   Method 2 - Download pre-built wheel:
+#     Visit: https://www.lfd.uci.edu/~gohlke/pythonlibs/#pyaudio
+#     Download appropriate .whl file for your Python version
+#     pip install pyaudio‑0.2.13‑cp311‑cp311‑win_amd64.whl
+#
+# MACOS:
+#   Install portaudio first:
+#     brew install portaudio
+#   Then install PyAudio:
+#     pip install pyaudio
+#
+# LINUX (Ubuntu/Debian):
+#   Install system dependencies:
+#     sudo apt-get update
+#     sudo apt-get install python3-pyaudio
+#   OR build from source:
+#     sudo apt-get install portaudio19-dev
+#     pip install pyaudio
+#
+# LINUX (Fedora/RedHat):
+#   sudo dnf install portaudio-devel
+#   pip install pyaudio
+#
+# If PyAudio fails, the app will still work WITHOUT voice features.
+#
+# -----------------------------------------------------------------------------
+# Groq API Client (Optional - for Groq Llama model)
+# -----------------------------------------------------------------------------
+#
+# If you want to use Groq's API client library instead of requests:
+#   pip install groq>=0.5.0
+#
+# Otherwise, the app uses requests library which is already included.
+#
+# -----------------------------------------------------------------------------
+# Testing Installation
+# -----------------------------------------------------------------------------
+#
+# After installing, test with:
+#   python -c "import google.genai; print('✓ Gemini OK')"
+#   python -c "import requests; print('✓ Requests OK')"
+#   python -c "import speech_recognition; print('✓ Speech Recognition OK')"
+#   python -c "import pyttsx3; print('✓ TTS OK')"
+#   python -c "import PyPDF2; print('✓ PDF OK')"
+#   python -c "import PIL; print('✓ Pillow OK')"
+#
+# =============================================================================
+# 🔧 TROUBLESHOOTING
+# =============================================================================
+#
+# Issue: "No module named 'tkinter'"
+# Solution: Tkinter is part of Python standard library
+#   Windows: Reinstall Python with "tcl/tk and IDLE" option checked
+#   Linux: sudo apt-get install python3-tk
+#   macOS: Should be included by default
+#
+# Issue: "SSL Certificate Error" with requests
+# Solution: pip install --upgrade certifi
+#
+# Issue: "Import Error" for google.genai
+# Solution: pip install --upgrade google-genai
+#
+# Issue: Voice features not working
+# Solution: Check microphone permissions in system settings
+#
+# =============================================================================
+# 📊 DEPENDENCY TREE
+# =============================================================================
+#
+# google-genai
+#   ├── google-ai-generativelanguage
+#   ├── google-auth
+#   └── protobuf
+#
+# requests
+#   ├── charset-normalizer
+#   ├── idna
+#   ├── urllib3
+#   └── certifi
+#
+# SpeechRecognition (uses Google Speech API - internet required)
+#
+# pyttsx3
+#   └── pywin32 (Windows only)
+#   └── pyobjc (macOS only)
+#
+# PyPDF2
+#   └── typing-extensions
+#
+# Pillow
+#   └── (no dependencies)
+#
+# =============================================================================
+# 🚀 QUICK START
+# =============================================================================
+#
+# 1. Create virtual environment:
+#    python -m venv venv
+#
+# 2. Activate virtual environment:
+#    Windows: venv\Scripts\activate
+#    macOS/Linux: source venv/bin/activate
+#
+# 3. Install requirements:
+#    pip install -r requirements.txt
+#
+# 4. If you want voice features:
+#    Follow PyAudio installation guide above
+#
+# 5. Run the application:
+#    python buddy_ai_assistant.py
+#
+# =============================================================================
+# 📝 NOTES
+# =============================================================================
+#
+# - All version constraints use semantic versioning
+# - Minimum versions are specified for security and compatibility
+# - Maximum versions prevent breaking changes
+# - Optional dependencies are commented out by default
+# - App will gracefully handle missing optional dependencies
+#
+# =============================================================================
+# 🔄 UPDATING DEPENDENCIES
+# =============================================================================
+#
+# Check for outdated packages:
+#   pip list --outdated
+#
+# Update specific package:
+#   pip install --upgrade package-name
+#
+# Update all packages (use with caution):
+#   pip install --upgrade -r requirements.txt
+#
+# Generate current installed versions:
+#   pip freeze > requirements-lock.txt
+#
+# =============================================================================
