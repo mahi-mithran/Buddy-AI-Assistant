@@ -3,7 +3,6 @@
 <div align="center">
 
 ![Python Version](https://img.shields.io/badge/python-3.8%2B-blue)
-![License](https://img.shields.io/badge/license-MIT-green)
 ![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20Linux%20%7C%20macOS-lightgrey)
 
 **A powerful, multi-model AI assistant with an intuitive GUI, voice capabilities, and file processing support.**
